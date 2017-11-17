@@ -16,18 +16,18 @@ public class GetOptDemoNew {
 		GetOpt parser = new GetOpt(options);
 		Map<String,String>optionsFound = parser.parseArguments(argv);
 		for(String key : optionsFound.keySet()) {
-			char c = key.charAt(0);   // 查找第一位
+			char c = key.charAt(0);
 			switch(c) {
-			case 'n' :
-				numeric_option = true;
+				case 'n' :
+					numeric_option = true;
 				break;
-			case'o' :
-				outputFileName =(String)optionsFound.get(key);
-			case'?' :
-				errs = true;
-				break;
-			default :
-				throw new IllegalStateException("Unexpected option character" + c);
+				case'o' :
+					outputFileName =(String)optionsFound.get(key);
+				case'?' :
+					errs = true;
+					break;
+				default :
+					throw new IllegalStateException("Unexpected option character" + c);
 			}
 		}
 		if(errs) {
