@@ -11,7 +11,7 @@ public class GetOptDemoNew {
 
 		GetOptDesc[] options = {
 				new GetOptDesc('n', "numeric", false),
-				new GetOptDesc('o', "output-file", false)
+				new GetOptDesc('o', "output-file", true)
 		};
 		GetOpt parser = new GetOpt(options);
 		Map<String,String>optionsFound = parser.parseArguments(argv);
