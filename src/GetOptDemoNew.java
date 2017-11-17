@@ -5,8 +5,8 @@ import com.darwinsys.lang.GetOptDesc;
 
 public class GetOptDemoNew {
 	public static void main(String[] argv) {
-		boolean numeric_option = true;
-		boolean errs = true;
+		boolean numeric_option = false;
+		boolean errs = false;
 		String outputFileName = null;
 
 		GetOptDesc[] options = {
